@@ -11,13 +11,18 @@ namespace Scripts
         [SerializeField] private TMP_InputField inputField;
         [SerializeField] private Button buttonSend;
 
+        [SerializeField] private Button buttonCode;
+
+
         private void Start()
         {
             text.text = "¡Hello!, Please:";
             if (buttonSend != null)
             {
                 buttonSend.onClick.AddListener(EventSend);
+                buttonCode.onClick.AddListener(Code);
             }
+
         }
 
         private void EventSend()
@@ -25,6 +30,14 @@ namespace Scripts
             string message = inputField.text;
             if (message != null)
                 JavaScript.SendMessage(message);
+                
         }
+
+        private void Code(){
+
+            JavaScript.WebTokenEncode();
+            JavaScript.WebTokenDecode();
+        }
+
     }
 }
