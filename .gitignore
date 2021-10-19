@@ -71,3 +71,6 @@ crashlytics-build.properties
 /dataSources.local.xml
 # Editor-based HTTP Client requests
 /httpRequests/
+
+# IDE
+/.idea
