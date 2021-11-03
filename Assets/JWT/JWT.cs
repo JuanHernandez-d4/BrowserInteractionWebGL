@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Security.Cryptography;
 using System.Text;
+using Newtonsoft.Json;
 
 namespace JWT
 {
@@ -128,7 +129,7 @@ namespace JWT
             var headerJson = Encoding.UTF8.GetString(Base64UrlDecode(header));
             var payloadJson = Encoding.UTF8.GetString(Base64UrlDecode(payload));
 
-            var headerData = JsonSerializer.Deserialize<Dictionary<string, object>>(headerJson);
+            var headerData = JsonConvert.DeserializeObject<Dictionary<string, object>>(headerJson);
 
             if (verify)
             {

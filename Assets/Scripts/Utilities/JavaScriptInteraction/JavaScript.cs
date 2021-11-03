@@ -38,9 +38,10 @@ namespace Scripts.Utilities.JavaScriptInteraction
                 var secretKey = "Rjs8hiE2pSDvoZGmWpeD826VrE5xo0B9";
                 string token = JWT.JsonWebToken.Encode(payload, secretKey, JWT.JwtHashAlgorithm.HS256);
                 Debug.Log(token);
+
         }
 
-        public static void WebTokenDecode(){
+        public static void WebTokenDecode(string token){
             var token = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOiIxMjM0NTY3ODkiLCJjcmVhdGVkQXQiOiJGb3Jlc3QifQ._jqIGHQP4NVNOTq0PvyoTIBM1pu3uxEQ3c9Dxd22TMw";
             var secretKey = "Rjs8hiE2pSDvoZGmWpeD826VrE5xo0B9";
             try

@@ -36,7 +36,7 @@ namespace Scripts
         private void Code(){
 
             JavaScript.WebTokenEncode();
-            JavaScript.WebTokenDecode();
+            //JavaScript.WebTokenDecode();
         }
 
     }
