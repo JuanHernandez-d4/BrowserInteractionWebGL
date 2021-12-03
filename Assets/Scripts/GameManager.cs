@@ -12,6 +12,7 @@ namespace Scripts
         [SerializeField] private Button buttonSend;
 
         [SerializeField] private Button buttonCode;
+        [SerializeField] private Button buttonPutUrl;
 
 
         private void Start()
@@ -21,6 +22,7 @@ namespace Scripts
             {
                 buttonSend.onClick.AddListener(EventSend);
                 buttonCode.onClick.AddListener(Code);
+                buttonPutUrl.onClick.AddListener(PutUrl);
             }
 
         }
@@ -37,6 +39,12 @@ namespace Scripts
 
             JavaScript.WebTokenEncode();
             //JavaScript.WebTokenDecode();
+        }
+
+        private void PutUrl(){
+
+            JavaScript.PutToken1();
+
         }
 
     }
